@@ -1,20 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f6f8;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   background: #ffffff;
-  padding: 30px;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -22,38 +25,34 @@ body {
   flex-direction: column;
 }
 
-
 h1 {
   color: #333;
-  margin-bottom: 25px;
-  font-size: 24px;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
-
 
 .btn-adicionar {
   background-color: #1890ff;
   border: none;
-  font-size: 16px;
-  padding: 12px;
+  font-size: 1rem;
+  padding: 1rem;
   border-radius: 8px;
-  transition: background-color 0.3s;
   width: 100%;
+  transition: background-color 0.3s;
 }
 
 .btn-adicionar:hover {
   background-color: #40a9ff;
 }
 
-
 .barra-pesquisa {
   width: 100%;
-  padding: 12px;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 25px;
-  font-size: 16px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
 }
-
 
 .tabela-container {
   flex-grow: 1;
@@ -68,13 +67,12 @@ h1 {
 .tabela-produtos {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 2rem;
   text-align: center;
 }
 
-.tabela-produtos th, 
-.tabela-produtos td {
-  padding: 14px;
+.tabela-produtos th, .tabela-produtos td {
+  padding: 1rem;
   border-bottom: 1px solid #ddd;
 }
 
@@ -85,25 +83,24 @@ h1 {
   top: 0;
 }
 
-
 .modal-formulario {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.2rem;
   align-items: center;
 }
 
 .modal-formulario input {
-  padding: 12px;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   width: 100%;
 }
 
 .modal-formulario button {
-  padding: 12px;
-  font-size: 16px;
+  padding: 1rem;
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
@@ -132,38 +129,47 @@ h1 {
 
 
 @media (max-width: 768px) {
-  body {
-    height: auto;
-    display: block;
-    padding: 20px;
-  }
-
   .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 0;
-    box-shadow: none;
+    padding: 1.5rem;
   }
 
   h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
   }
 
+  .btn-adicionar,
   .barra-pesquisa {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .btn-adicionar {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 0.9rem;
   }
 
   .tabela-produtos {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+
+  .modal-formulario input,
+  .modal-formulario button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn-adicionar,
+  .barra-pesquisa {
+    font-size: 0.8rem;
+  }
+
+  .modal-formulario input,
+  .modal-formulario button {
+    font-size: 0.8rem;
   }
 }

@@ -35,7 +35,7 @@ const App = () => {
 
   const abrirModal = (produto = null) => {
     setProdutoEditando(
-      produto ? { ...produto } : { name: "", price: "", description: "" }
+      produto ? { ...produto } : { name: "", price: "", description: "", quantity: 0 }
     );
     setModalVisivel(true);
   };
@@ -46,10 +46,21 @@ const App = () => {
   };
 
   const salvarProduto = async produto => {
+    if (produto.quantity > 100000000) {
+      alert("A quantidade do produto não pode ultrapassar 100.000.000.");
+      return;
+    }
+
     const editando = !!produtoEditando?.id;
     const url = editando ? `${API_URL}/${produtoEditando.id}` : API_URL;
     const metodo = editando ? "PUT" : "POST";
-    produto.id = editando ? String(produtoEditando.id) : String(produtos.length > 0 ? Math.max(...produtos.map(p => Number(p.id))) + 1 : 1);
+    produto.id = editando
+      ? String(produtoEditando.id)
+      : String(
+          produtos.length > 0
+            ? Math.max(...produtos.map(p => Number(p.id))) + 1
+            : 1
+        );
 
     try {
       const resposta = await fetch(url, {
@@ -68,14 +79,12 @@ const App = () => {
 
   const excluirProduto = async id => {
     const idString = String(id);
-    console.log(`Tentando excluir produto com ID: ${idString}`);
     try {
       const resposta = await fetch(`${API_URL}/${idString}`, { method: "DELETE" });
       if (!resposta.ok) {
         const erroTexto = await resposta.text();
         throw new Error(`Erro ao excluir produto: ${erroTexto}`);
       }
-      console.log(`Produto ${idString} excluído com sucesso.`);
       setProdutos(produtos => produtos.filter(produto => produto.id !== idString));
     } catch (erro) {
       console.error("Erro ao excluir produto:", erro);
@@ -96,7 +105,7 @@ const App = () => {
           key={produtoEditando?.id || "novo"}
           visivel={modalVisivel}
           aoCancelar={fecharModal}
-          valoresIniciais={produtoEditando || { name: "", price: "", description: "" }}
+          valoresIniciais={produtoEditando || { name: "", price: "", description: "", quantity: 0 }}
           aoSalvar={salvarProduto}
         />
       )}

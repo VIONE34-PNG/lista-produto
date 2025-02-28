@@ -55,10 +55,10 @@
       "location": "H2"
     },
     {
-      "id": "10",
       "name": "Placa de Vídeo RTX 3060",
-      "quantity": 2,
-      "location": "I5"
+      "quantity": "333",
+      "location": "I5",
+      "id": "10"
     }
   ]
 }
