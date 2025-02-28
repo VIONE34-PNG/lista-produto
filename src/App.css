@@ -1,4 +1,4 @@
-/* 🎨 Estilos Gerais */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f6f8;
@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-/* 📌 Container Principal */
+
 .container {
   width: 90%;
   max-width: 800px;
@@ -23,14 +23,14 @@ body {
   flex-direction: column;
 }
 
-/* 📌 Cabeçalho */
+
 h1 {
   color: #333;
   margin-bottom: 25px;
   font-size: 24px;
 }
 
-/* 📌 Botão Adicionar */
+
 .btn-adicionar {
   background-color: #1890ff;
   border: none;
@@ -45,7 +45,7 @@ h1 {
   background-color: #40a9ff;
 }
 
-/* 📌 Barra de Pesquisa */
+
 .barra-pesquisa {
   width: 100%;
   padding: 12px;
@@ -55,7 +55,7 @@ h1 {
   font-size: 16px;
 }
 
-/* 📌 Tabela de Produtos */
+
 .tabela-container {
   flex-grow: 1;
   overflow-y: auto;
@@ -86,7 +86,7 @@ h1 {
   top: 0;
 }
 
-/* 📌 Modal de Formulário */
+
 .modal-formulario {
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ h1 {
   background-color: #ff7875;
 }
 
-/* 📌 Ajustes para Mobile */
+
 @media (max-width: 768px) {
   body {
     height: auto;
