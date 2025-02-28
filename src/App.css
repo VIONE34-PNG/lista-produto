@@ -1,3 +1,4 @@
+/* 🎨 Estilos Gerais */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f6f8;
@@ -9,10 +10,10 @@ body {
   height: 100vh;
 }
 
+/* 📌 Container Principal */
 .container {
   width: 90%;
   max-width: 800px;
-  height: auto; 
   background: #ffffff;
   padding: 30px;
   border-radius: 12px;
@@ -22,6 +23,39 @@ body {
   flex-direction: column;
 }
 
+/* 📌 Cabeçalho */
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* 📌 Botão Adicionar */
+.btn-adicionar {
+  background-color: #1890ff;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn-adicionar:hover {
+  background-color: #40a9ff;
+}
+
+/* 📌 Barra de Pesquisa */
+.barra-pesquisa {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* 📌 Tabela de Produtos */
 .tabela-container {
   flex-grow: 1;
   overflow-y: auto;
@@ -32,25 +66,6 @@ body {
   border-radius: 8px;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 25px;
-  font-size: 24px;
-}
-
-.ant-btn-primary {
-  background-color: #1890ff;
-  border: none;
-  font-size: 16px;
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.ant-btn-primary:hover {
-  background-color: #40a9ff;
-}
-
 .tabela-produtos {
   width: 100%;
   border-collapse: collapse;
@@ -58,7 +73,8 @@ h1 {
   text-align: center;
 }
 
-.tabela-produtos th, .tabela-produtos td {
+.tabela-produtos th, 
+.tabela-produtos td {
   padding: 14px;
   border-bottom: 1px solid #ddd;
 }
@@ -66,38 +82,11 @@ h1 {
 .tabela-produtos th {
   background-color: #1890ff;
   color: white;
-  position: sticky; 
+  position: sticky;
   top: 0;
 }
 
-.tabela-produtos tbody {
-  display: block;
-  max-height: 55vh;
-  overflow-y: auto;
-  width: 100%;
-}
-
-.tabela-produtos thead,
-.tabela-produtos tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.tabela-produtos tr:hover {
-  background-color: #f1f1f1;
-  transition: background-color 0.3s;
-}
-
-.barra-pesquisa {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 25px;
-  font-size: 16px;
-}
-
+/* 📌 Modal de Formulário */
 .modal-formulario {
   display: flex;
   flex-direction: column;
@@ -110,7 +99,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
-  width: 90%;
+  width: 100%;
 }
 
 .modal-formulario button {
@@ -140,4 +129,42 @@ h1 {
 
 .modal-formulario button.cancelar:hover {
   background-color: #ff7875;
+}
+
+/* 📌 Ajustes para Mobile */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .barra-pesquisa {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-adicionar {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .tabela-produtos {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
