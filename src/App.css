@@ -1,0 +1,143 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  height: auto; 
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabela-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 65vh;
+  min-height: 200px;
+  padding-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border: none;
+  font-size: 16px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tabela-produtos th, .tabela-produtos td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabela-produtos th {
+  background-color: #1890ff;
+  color: white;
+  position: sticky; 
+  top: 0;
+}
+
+.tabela-produtos tbody {
+  display: block;
+  max-height: 55vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.tabela-produtos thead,
+.tabela-produtos tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tabela-produtos tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+.barra-pesquisa {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.modal-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.modal-formulario input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 90%;
+}
+
+.modal-formulario button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.modal-formulario button.salvar {
+  background-color: #52c41a;
+  color: white;
+  border: none;
+}
+
+.modal-formulario button.salvar:hover {
+  background-color: #73d13d;
+}
+
+.modal-formulario button.cancelar {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+}
+
+.modal-formulario button.cancelar:hover {
+  background-color: #ff7875;
+}

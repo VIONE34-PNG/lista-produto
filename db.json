@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Teclado Mecânico",
+      "quantity": 10,
+      "location": "A1"
+    },
+    {
+      "id": "3",
+      "name": "Monitor 27\"",
+      "quantity": 5,
+      "location": "B3"
+    },
+    {
+      "id": "4",
+      "name": "Notebook i7",
+      "quantity": 8,
+      "location": "C1"
+    },
+    {
+      "id": "5",
+      "name": "Cadeira Gamer",
+      "quantity": 3,
+      "location": "D4"
+    },
+    {
+      "id": "6",
+      "name": "Fone de Ouvido Bluetooth",
+      "quantity": 20,
+      "location": "E2"
+    },
+    {
+      "id": "7",
+      "name": "Webcam Full HD",
+      "quantity": 12,
+      "location": "F3"
+    },
+    {
+      "id": "8",
+      "name": "Impressora Multifuncional",
+      "quantity": 4,
+      "location": "G1"
+    },
+    {
+      "id": "9",
+      "name": "HD Externo 1TB",
+      "quantity": 9,
+      "location": "H2"
+    },
+    {
+      "name": "RTX 3060",
+      "quantity": 2,
+      "location": "I5",
+      "id": "10"
+    }
+  ]
+}
